@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/mbugrahansav/wrs-turkey/issues"
   },
-  "homepage": "https://github.com/mbugrahansav/wrs-turkey#readme",
+  "homepage": "https://mbugrahansav.github.io/wrs-turkey-preview",
   "devDependencies": {
     "live-server": "^1.2.2"
   },
