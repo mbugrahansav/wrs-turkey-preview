@@ -1,3 +1,9 @@
+const baseURL = window.location.pathname.includes('wrs-turkey-preview') 
+  ? '/wrs-turkey-preview' 
+  : '';
+
+
+
 // Popup --------------------------------------------------------------------------
 
 /* function showPopup() {
@@ -93,7 +99,7 @@ function updateLanguageSelector(lang) {
 }
 
 function loadLanguage(lang) {
-  fetch(`/src/lang/car-rental/${lang}.json`)
+  fetch(`${baseURL}/src/lang/car-rental/${lang}.json`)
     .then(res => res.json())
     .then(data => {
       for (const key in data) {

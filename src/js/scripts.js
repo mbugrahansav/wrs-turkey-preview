@@ -1,3 +1,9 @@
+const baseURL = window.location.pathname.includes('wrs-turkey-preview') 
+  ? '/wrs-turkey-preview' 
+  : '';
+
+
+
 const video = document.getElementById('intro-video');
 
 const isMobile = window.matchMedia('(max-width: 780px)').matches;
@@ -142,7 +148,7 @@ function updateLanguageSelector(lang) {
 }
 
 function loadLanguage(lang) {
-  fetch(`/src/lang/landing/${lang}.json`)
+  fetch(`${baseURL}/src/lang/landing/${lang}.json`)
     .then(res => res.json())
     .then(data => {
       for (const key in data) {
@@ -306,11 +312,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }); */
 
   document.getElementById('btn-corp').addEventListener('click', () => {
-    window.location.href = '/wrs-corp/';
+    window.location.href = `${baseURL}/wrs-corp/`;
   });
 
   document.getElementById('btn-management').addEventListener('click', () => {
-    window.location.href = '/car-rental/';
+    window.location.href = `${baseURL}/car-rental/`;
   });
 
 
