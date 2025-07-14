@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
+  <meta content="" name="description" />
+  <meta content="" name="Simgesel Media" />
+  <title>WRS Turkey</title>
+  <!-- Favicon-->
+  <link rel="icon" type="image/png" href="../favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="../favicon/favicon.svg" />
+  <link rel="shortcut icon" href="../favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="WRS Turkey" />
+  <link rel="manifest" href="../favicon/site.webmanifest" />
+  <!-- Font Awesome 6 CDN (en az bu olmalı) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.min.css"
+    rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+  <link href="../src/css/wrs-corp.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div data-bs-offset="70" data-bs-spy="scroll" data-bs-target="#mainNav" id="page-top" tabindex="0">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+      <div class="container">
+        <a href="/">
+          <div class="wrs-turkey-logo"></div>
+        </a>
+        <button aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"
+          class="navbar-toggler" data-bs-target="#navbarResponsive" data-bs-toggle="collapse" type="button">
+          Menu
+          <i class="fas fa-bars ms-1"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" data-i18n="nav_about" href="#about"></a></li>
+            <li class="nav-item"><a class="nav-link" data-i18n="nav_accommodation" href="#accommodation"></a></li>
+            <li class="nav-item"><a class="nav-link" data-i18n="nav_meetings_events" href="#meetingsandevents"></a></li>
+            <li class="nav-item"><a class="nav-link" data-i18n="nav_security" href="#security"></a></li>
+            <li class="nav-item"><a class="nav-link" data-i18n="nav_contact" href="#contact"></a></li>
+          </ul>
+          <div class="navbar-collapse-dropdowns">
+            <div class="dropdown">
+              <button class="wrs-app-btn">
+                <span data-i18n="wrs_corp_app"></span>
+              </button>
+            </div>
+            <div class="language-selector">
+              <div class="language-trigger">
+                <img src="https://flagcdn.com/w320/tr.png" alt="Current Language Flag" class="currentFlag">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="dropdown-icon">
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </div>
+              <div class="language-dropdown">
+                <div class="language-option" data-lang="tr">
+                  <img src="https://flagcdn.com/w320/tr.png" alt="Turkish Flag">
+                  <div class="language-option-text">
+                    <span class="language-name">Türkçe</span>
+                    <span class="language-code">TR</span>
+                  </div>
+                </div>
+                <div class="language-option" data-lang="en">
+                  <img src="https://flagcdn.com/w320/gb.png" alt="English Flag">
+                  <div class="language-option-text">
+                    <span class="language-name">English</span>
+                    <span class="language-code">EN</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Main a -->
+    <section class="page-section bg-darkblue" style="min-height: 50vh">
+      <div class="container">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <h2 data-i18n="main_a_title" style="font-style: italic; color: #d3d3d3;"></h2>
+          <p data-i18n="main_a_desc" style="font-style: italic; color: #d3d3d3;"></p>
+        </div>
+        <div id="form-popup-overlay" class="form-popup-overlay d-none">
+          <div class="form-popup-content">
+            <button id="close-popup" class="close-btn">&times;</button>
+            <div id="broker-form" class="popup-form d-none">
+              <h4 data-i18n="form_broker_title"></h4>
+              <form action="https://formsubmit.co/info@wrsturkey.com" method="POST">
+                <input type="hidden" name="_next" value="http://127.0.0.1:8080/#form-success">
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="companyName" class="form-label" data-i18n="form_broker_firma_adi"></label>
+                    <input class="form-control" type="text" name="firma_adi" id="companyName" required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="countries" class="form-label"
+                      data-i18n="form_broker_faaliyet_gosterdigi_ulkeler"></label>
+                    <input class="form-control" type="text" name="faaliyet_gosterdigi_ulkeler" id="countries" required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="authorizedName" class="form-label" data-i18n="form_broker_yetkili_adi"></label>
+                    <input class="form-control" type="text" name="yetkili_adi" id="authorizedName" required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="authorizedEmail" class="form-label" data-i18n="form_broker_yetkili_email"></label>
+                    <input class="form-control" type="email" name="yetkili_email" id="authorizedEmail" required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="authorizedPhone" class="form-label" data-i18n="form_broker_yetkili_telefon"></label>
+                    <input class="form-control" type="tel" name="yetkili_telefon" id="authorizedPhone" required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="gsmNumber" class="form-label" data-i18n="form_broker_gsm"></label>
+                    <input class="form-control" class="form-control" type="tel" name="gsm" id="gsmNumber">
+                  </div>
+                  <div class="col-md-12 mb-3">
+                    <label for="messageText" class="form-label" data-i18n="form_broker_aciklama"></label>
+                    <textarea class="form-control" name="aciklama" id="messageText" rows="4"></textarea>
+                  </div>
+                  <div class="col-12">
+                    <button class="btn btn-primary btn-submit d-block ml-auto" type="submit"
+                      data-i18n="form_submit_lowercase"></button>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div id="subagency-form" class="popup-form d-none">
+              <h4 data-i18n="form_subagency_title"></h4>
+              <form action="https://formsubmit.co/info@wrsturkey.com" method="POST">
+                <input type="hidden" name="_next" value="http://127.0.0.1:8080/#form-success">
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="agencyName" class="form-label" data-i18n="form_subagency_acente_adi"></label>
+                    <input class="form-control" type="text" name="acente_adi" id="agencyName" required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="agencyTitle" class="form-label" data-i18n="form_subagency_acente_unvani"></label>
+                    <input class="form-control" type="text" name="acente_unvani" id="agencyTitle" required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="agencyLicenseNumber" class="form-label"
+                      data-i18n="form_subagency_acente_belge_numarasi"></label>
+                    <input class="form-control" type="text" name="acente_belge_numarasi" id="agencyLicenseNumber"
+                      required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="countries" class="form-label"
+                      data-i18n="form_subagency_faaliyet_gosterdigi_ulke"></label>
+                    <input class="form-control" type="text" name="faaliyet_gosterdigi_ulke" id="countries" required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="cities" class="form-label"
+                      data-i18n="form_subagency_faaliyet_gosterdigi_sehirler"></label>
+                    <input class="form-control" type="text" name="faaliyet_gosterdigi_sehirler" id="cities" required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="authorizedName" class="form-label" data-i18n="form_subagency_yetkili_adi"></label>
+                    <input class="form-control" type="text" name="yetkili_adi" id="authorizedName" required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="authorizedEmail" class="form-label" data-i18n="form_subagency_yetkili_email"></label>
+                    <input class="form-control" type="email" name="yetkili_email" id="authorizedEmail" required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="authorizedPhone" class="form-label" data-i18n="form_subagency_yetkili_telefon"></label>
+                    <input class="form-control" type="tel" name="yetkili_telefon" id="authorizedPhone" required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="gsmNumber" class="form-label" data-i18n="form_subagency_gsm"></label>
+                    <input class="form-control" class="form-control" type="tel" name="gsm" id="gsmNumber">
+                  </div>
+                  <div class="col-md-12 mb-3">
+                    <label for="messageText" class="form-label" data-i18n="form_subagency_aciklama"></label>
+                    <textarea class="form-control" name="aciklama" id="messageText" rows="4"></textarea>
+                  </div>
+                  <div class="col-12">
+                    <button class="btn btn-primary btn-submit d-block ml-auto" type="submit"
+                      data-i18n="form_submit_lowercase"></button>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div id="fleet-form" class="popup-form d-none">
+              <h4 data-i18n="form_fleet_title"></h4>
+              <form action="https://formsubmit.co/info@wrsturkey.com" method="POST">
+                <input type="hidden" name="_next" value="http://127.0.0.1:8080/#form-success">
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="companyName" class="form-label" data-i18n="form_fleet_firma_adi"></label>
+                    <input class="form-control" type="text" name="firma_adi" id="companyName" required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="companyTitle" class="form-label" data-i18n="form_fleet_firma_unvani"></label>
+                    <input class="form-control" type="text" name="firma_unvani" id="companyTitle" required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="areaofOperation" class="form-label" data-i18n="form_fleet_faaliyet_alani"></label>
+                    <input class="form-control" type="text" name="faaliyet_alani" id="areaofOperation" required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="countries" class="form-label"
+                      data-i18n="form_fleet_faaliyet_gosterdigi_ulkeler"></label>
+                    <input class="form-control" type="text" name="faaliyet_gosterdigi_ulkeler" id="countries" required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="cities" class="form-label" data-i18n="form_fleet_faaliyet_gosterdigi_sehirler"></label>
+                    <input class="form-control" type="text" name="faaliyet_gosterdigi_sehirler" id="cities" required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="vehicleClassRequested" class="form-label"
+                      data-i18n="form_fleet_talep_edilen_arac_sinifi"></label>
+                    <input class="form-control" type="text" name="talep_edilen_arac_sinifi" id="vehicleClassRequested"
+                      required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="vehiclesRequested" class="form-label"
+                      data-i18n="form_fleet_talep_edilen_arac_sayisi"></label>
+                    <input class="form-control" type="text" name="talep_edilen_arac_sayisi" id="vehiclesRequested"
+                      required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="authorizedName" class="form-label" data-i18n="form_fleet_yetkili_adi"></label>
+                    <input class="form-control" type="text" name="yetkili_adi" id="authorizedName" required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="authorizedEmail" class="form-label" data-i18n="form_fleet_yetkili_email"></label>
+                    <input class="form-control" type="email" name="yetkili_email" id="authorizedEmail" required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="authorizedPhone" class="form-label" data-i18n="form_fleet_yetkili_telefon"></label>
+                    <input class="form-control" type="tel" name="yetkili_telefon" id="authorizedPhone" required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="gsmNumber" class="form-label" data-i18n="form_fleet_gsm"></label>
+                    <input class="form-control" class="form-control" type="tel" name="gsm" id="gsmNumber">
+                  </div>
+                  <div class="col-md-12 mb-3">
+                    <label for="messageText" class="form-label" data-i18n="form_fleet_aciklama"></label>
+                    <textarea class="form-control" name="aciklama" id="messageText" rows="4"></textarea>
+                  </div>
+                  <div class="col-12">
+                    <button class="btn btn-primary btn-submit d-block ml-auto" type="submit"
+                      data-i18n="form_submit_lowercase"></button>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div id="rent-form" class="popup-form d-none">
+              <h4 data-i18n="form_rent_title"></h4>
+              <form action="https://formsubmit.co/info@wrsturkey.com" method="POST">
+                <input type="hidden" name="_next" value="http://127.0.0.1:8080/#form-success">
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="fullame" class="form-label" data-i18n="form_rent_fullname"></label>
+                    <input class="form-control" type="text" name="ad_soyad" id="fullname" required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="email" class="form-label" data-i18n="form_rent_email"></label>
+                    <input class="form-control" type="email" name="email" id="email" required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="phone" class="form-label" data-i18n="form_rent_phone"></label>
+                    <input class="form-control" type="tel" name="telefon" id="phone" required>
+                  </div>
+                  <div class="col-md-12 mb-3">
+                    <label for="messageText" class="form-label" data-i18n="form_rent_message"></label>
+                    <textarea class="form-control" name="aciklama" id="messageText" rows="4"></textarea>
+                  </div>
+                  <div class="col-12">
+                    <button class="btn btn-primary btn-submit d-block ml-auto" type="submit"
+                      data-i18n="form_submit_lowercase"></button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="popup-overlay" id="popup-overlay">
+          <div class="modern-popup" id="thank-you-popup">
+            <button class="close-x" onclick="hidePopup()">×</button>
+            <div class="success-icon"></div>
+            <div class="popup-content">
+              <h2 class="popup-title">Teşekkür Ederiz!</h2>
+              <p class="popup-message" data-i18n="popup_message_thanks"></p>
+              <p class="popup-message" data-i18n="popup_message_asap"></p>
+              <div class="company-info">
+                <span data-i18n="popup_message_wrs"></span><br><span data-i18n="popup_message_corp"></span>
+              </div>
+              <button class="popup-close-btn" onclick="hidePopup()">Tamam</button>
+            </div>
+          </div>
+        </div>
+    </section>
+    <!-- Main b -->
+    <section class="page-section" style="min-height: 50vh">
+      <div class="container d-flex justify-content-end">
+        <div class="col-lg-6 col-md-6 col-sm-12 text-end">
+          <h2 data-i18n="main_b_title" style="font-style: italic; color: black;"></h2>
+          <p data-i18n="main_b_par" style="font-style: italic; color: black;"></p>
+        </div>
+    </section>
+
+    <!-- about -->
+    <section class="page-section bg-light py-5" id="about">
+      <div class="container">
+        <div class="features-section-title">
+          <h2 class="section-heading" data-i18n="about_heading"></h2>
+          <p data-i18n="about_desc"></p>
+        </div>
+        <div class="row g-0 justify-content-center" style="margin-top: 5vh;">
+          <div class="features-map-image col-lg-6 custom-col-md-12 col-sm-12">
+            <img alt="..." src="../src/assets/img/features/wrs-turkey-map.png" />
+          </div>
+          <div class="col-lg-6 col-md-12 col-sm-12 features-box">
+            <div class="features-container">
+              <h2 data-i18n="about_title"></h2>
+              <ul>
+                <li data-i18n="about_list_1"></li>
+                <li data-i18n="about_list_2"></li>
+                <li data-i18n="about_list_3"></li>
+                <li data-i18n="about_list_4"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- services cards -->
+    <section class="page-section bg-darkblue min-h-auto py-5">
+      <div class="cards-container">
+        <div class="card">
+          <ul>
+            <li>Kurumsal Konaklama</li>
+            <li>Yurtiçi ve Yurtdışı Uçak Bileti</li>
+            <li>Stratejik Toplantı Yönetimi (STY)</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <ul>
+            <li>Yurtiçi ve Yurtdışı Kurumsal Etkinlikler</li>
+            <li>Seyehat Güvenliği ve Risk Yönetimi (International S.O.S)</li>
+            <li>Yurtiçi ve Yurtdışı Fuar Organizasyonu</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <ul>
+            <li>Araç Kiralama</li>
+            <li>Filo Kiralama</li>
+            <li>Yurtiçi ve Yurtdışı V.I.P Transfer</li>
+          </ul>
+        </div>
+    </section>
+
+    <!-- accommodation a -->
+    <section class="page-section" id="accommodation">
+      <div class="container">
+        <div class="features-section-title">
+          <h2 class="section-heading" data-i18n="accommodation_heading"></h2>
+        </div>
+        <div class="row g-0 justify-content-center" style="margin-top: 5vh;">
+          <div class="features-map-image col-lg-6 custom-col-md-12 col-sm-12">
+            <img alt="..." src="../src/assets/img/features/wrs-turkey-map.png" />
+          </div>
+          <div class="col-lg-6 col-md-12 col-sm-12 features-box">
+            <div class="accommodation-container">
+              <h2 class="text-align-end" data-i18n="accommodation_title"></h2>
+              <p class="text-align-end" data-i18n="accommodation_desc"></p>
+              <ul>
+                <li data-i18n="accommodation_list_1"></li>
+                <li data-i18n="accommodation_list_2"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- interlude a -->
+    <section class="why-wrs page-section bg-darkblue min-h-auto">
+      <div class="container py-8">
+        <div class="features-section-title m-0">
+          <h2 class="section-heading" data-i18n="interlude_heading" style="color: white;"></h2>
+          <p data-i18n="interlude_desc" style="color: #d3d3d3;"></p>
+          <button class="contact-btn justify-self-center">
+            <span data-i18n="nav_contact"></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- accommodation b -->
+    <section class="page-section bg-light" id="features">
+      <div class="container">
+        <div class="row g-0 justify-content-center" style="margin-top: 5vh;">
+          <div class="col-lg-6 col-md-12 col-sm-12 features-box">
+            <div class="accommodation-container">
+              <h2 class="" data-i18n="accommodation_b_title"></h2>
+              <p data-i18n="accommodation_b_desc"></p>
+              <ul>
+                <li data-i18n="accommodation_b_paragraph"></li>
+              </ul>
+            </div>
+          </div>
+          <div class="features-map-image col-lg-6 custom-col-md-12 col-sm-12">
+            <img alt="..." src="../src/assets/img/features/wrs-turkey-map.png" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- interlude b -->
+    <section class="why-wrs page-section bg-darkblue min-h-auto">
+      <div class="container py-8">
+        <div class="features-section-title m-0">
+          <h2 class="section-heading" data-i18n="interlude_b_heading" style="color: white;"></h2>
+          <p data-i18n="interlude_b_desc" style="color: #d3d3d3;"></p>
+          <button class="contact-btn justify-self-center">
+            <span data-i18n="nav_contact"></span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- meetings & events a -->
+    <section class="page-section" id="meetingsandevents">
+      <div class="container">
+        <div class="features-section-title">
+          <h2 class="section-heading" data-i18n="meetings_events_heading"></h2>
+        </div>
+        <div class="row g-0 justify-content-center" style="margin-top: 5vh;">
+          <div class="features-map-image col-lg-6 custom-col-md-12 col-sm-12">
+            <img alt="..." src="../src/assets/img/features/wrs-turkey-map.png" />
+          </div>
+          <div class="col-lg-6 col-md-12 col-sm-12 features-box">
+            <div class="accommodation-container">
+              <h2 class="text-align-end" data-i18n="meetings_events_title"></h2>
+              <p class="text-align-end" data-i18n="meetings_events_desc"></p>
+              <ul>
+                <li data-i18n="meetings_events_list_1"></li>
+                <li data-i18n="meetings_events_list_2"></li>
+                <li data-i18n="meetings_events_list_3"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- meetings & events b -->
+    <section class="page-section bg-light" id="features">
+      <div class="container">
+        <div class="row g-0 justify-content-center" style="margin-top: 5vh;">
+          <div class="col-lg-6 col-md-12 col-sm-12 features-box">
+            <div class="accommodation-container">
+              <h2 class="" data-i18n="meetings_events_b_title"></h2>
+              <p data-i18n="meetings_events_b_desc"></p>
+              <ul>
+                <li data-i18n="meetings_events_b_list_1"></li>
+                <li data-i18n="meetings_events_b_list_2"></li>
+              </ul>
+            </div>
+          </div>
+          <div class="features-map-image col-lg-6 custom-col-md-12 col-sm-12">
+            <img alt="..." src="../src/assets/img/features/wrs-turkey-map.png" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- interlude c -->
+    <section class="why-wrs page-section bg-darkblue min-h-auto">
+      <div class="container py-8">
+        <div class="features-section-title m-0">
+          <h2 class="section-heading" data-i18n="interlude_c_heading" style="color: white;"></h2>
+          <p data-i18n="interlude_c_desc" style="color: #d3d3d3;"></p>
+          <button class="contact-btn justify-self-center">
+            <span data-i18n="nav_contact"></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- security -->
+    <section class="page-section py-5" id="security">
+      <div class="container">
+        <div class="features-section-title">
+          <h2 class="section-heading" data-i18n="security_heading"></h2>
+          <p data-i18n="security_desc"></p>
+        </div>
+        <div class="row g-0 justify-content-center" style="margin-top: 5vh;">
+          <div class="features-map-image col-lg-6 custom-col-md-12 col-sm-12">
+            <img alt="..." src="../src/assets/img/features/wrs-turkey-map.png" />
+          </div>
+          <div class="col-lg-6 col-md-12 col-sm-12 features-box">
+            <div class="features-container">
+              <h2 data-i18n="security_title"></h2>
+              <ul>
+                <li data-i18n="security_list_1"></li>
+                <li data-i18n="security_list_2"></li>
+                <li data-i18n="security_list_3"></li>
+                <li data-i18n="security_list_4"></li>
+                <li data-i18n="security_list_5"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact-->
+    <section class="page-section min-h-auto pt-0" id="contact">
+      <div class="container mb-0">
+        <div class="text-center mb-4 mt-4">
+          <h2 class="section-heading" data-i18n="contact_heading"></h2>
+        </div>
+        <div class="d-grid place-items-center">
+          <div class="w-90">
+            <form action="https://formsubmit.co/info@wrsturkey.com" id="contactForm" method="POST">
+              <input type="hidden" name="_next" value="http://127.0.0.1:8080/#form-success">
+              <div class="row align-items-stretch mb-4">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="contact-label" for="fullName" class="form-label" data-i18n="form_fullname"></label>
+                    <input class="form-control" id="fullName" name="ad_soyad" required="" type="text">
+                    </input>
+                  </div>
+                  <div class="form-group">
+                    <label class="contact-label" for="email" class="form-label" data-i18n="form_email"></label>
+                    <input class="form-control" id="email" name="email" required="" type="email" />
+                  </div>
+                  <div class="form-group mb-0">
+                    <label class="contact-label" for="phone" class="form-label" data-i18n="form_phone"></label>
+                    <input class="form-control" name="phone" required="" type="tel" />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group form-group-textarea mb-md-0">
+                    <label class="contact-label" for="messageText" class="form-label" data-i18n="form_message"></label>
+                    <textarea class="form-control" id="messageText" name="mesaj" required=""></textarea>
+                  </div>
+                </div>
+                <div class="contact-form-button text-end">
+                  <button class="btn btn-primary btn-xs" data-i18n="form_submit" id="submitButton" type="submit">
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="d-flex w-90 justify-content-between">
+            <div class="contact-info-container">
+              <h3 class="section-heading contact-info-heading" data-i18n="contact_info_heading"></h3>
+              <div class="contact-info">
+                <span style="color: white;" data-i18n="contact_company"></span><br>
+                <span style="color: white; white-space: pre-line;" data-i18n="contact_address"></span><br>
+                <span style="color: white;" data-i18n="contact_mail"></span><br>
+                <span style="color: white;" data-i18n="contact_tel"></span>
+              </div>
+            </div>
+            <div class="contact-info-container">
+              <h3 class="section-heading contact-info-heading" data-i18n="solutions_heading"></h3>
+              <div class="contact-info">
+                <a href="#accommodation"><span style="color: white;" data-i18n="solution_1"></span></a><br>
+                <a href="#meetingsandevents"><span style="color: white;" data-i18n="solution_2"></span></a><br>
+                <a href="#security"><span style="color: white;" data-i18n="solution_3"></span></a>
+              </div>
+            </div>
+            <div class="contact-info-container">
+              <h3 class="section-heading contact-info-heading" data-i18n="our_corp_heading"></h3>
+              <div class="contact-info">
+                <a href="#about"><span style="color: white;" data-i18n="about_corp"></span></a>
+              </div>
+            </div>
+            <div class="contact-info-container">
+              <h3 class="section-heading contact-info-heading" data-i18n="support_heading"></h3>
+              <div class="contact-info">
+                <span style="color: white;" data-i18n="nav_contact"></span><br>
+                <span style="color: white;" data-i18n="emergency_tel"></span><br>
+                <span style="color: white;" data-i18n="wrs_corp"></span>
+              </div>
+            </div>
+          </div>
+          <div class="w-90 text-center">
+            <div class="social-media-icon-container">
+              <a aria-label="X" class="btn btn-light btn-social mx-3" href="https://x.com/wrsturkey"
+                rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+              <a aria-label="Instagram" class="btn btn-light btn-social mx-3" href="https://www.instagram.com/wrsturkey"
+                rel="noopener noreferrer" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a aria-label="LinkedIn" class="btn btn-light btn-social mx-3"
+                href="https://www.linkedin.com/in/wrs-turkey-611837363" rel="noopener noreferrer" target="_blank"><i
+                  class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer-->
+    <footer class="footer" id="footer">
+      <div class="container py-1">
+        <div class="text-center">Copyright © Simgesel Media 2025</div>
+      </div>
+    </footer>
+  </div>
+
+  <div class="logo-marquee-fixed">
+    <div class="logo-marquee">
+      <div class="logo-track" id="logoTrack">
+        <img src="../src/assets/img/logos/wrs-turkey.png" alt="Logo 1" />
+        <img src="../src/assets/img/logos/wrs-turkey.png" alt="Logo 2" />
+        <img src="../src/assets/img/logos/wrs-turkey.png" alt="Logo 3" />
+        <img src="../src/assets/img/logos/wrs-turkey.png" alt="Logo 4" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Core theme JS-->
+  <script src="/src/js/wrs-corp-scripts.js"></script>
+
+</body>
+
+</html>
