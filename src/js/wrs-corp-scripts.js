@@ -2,7 +2,7 @@ const baseURL = window.location.pathname.includes('wrs-turkey-preview')
   ? '/wrs-turkey-preview' 
   : '';
 
-
+document.getElementById('logo-link').href = baseURL + '/';
 
 // Popup --------------------------------------------------------------------------
 
